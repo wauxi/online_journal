@@ -1,0 +1,275 @@
+@charset "UTF-8";
+/**
+  Нормализация блочной модели
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+  Упрощаем работу с изображениями
+ */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  height: 100%;
+  /**
+    Плавный скролл
+   */
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --color-bg: #f2efe7;
+  --color-dark: #333333;
+  --color-dark-alt: #555555;
+  --color-light: #eeeeee;
+  --color-border: #cccccc;
+  --color-text-dark: #222222;
+  --color-text-light: #777777;
+  --font-family-base: "Indie Flower", cursive;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  background-color: var(--color-bg);
+  overflow-y: auto;
+}
+
+.diary__content {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow-y: auto;
+  line-height: 1.9;
+  font-size: 20px;
+}
+
+.diary__page {
+  padding: 40px 30px 100px;
+  position: relative;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.diary__page:last-child {
+  border-right: none;
+}
+.diary__page-date {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px 0 20px;
+  color: var(--color-text-dark);
+}
+.diary__page-img {
+  width: 100%;
+}
+.diary__page-img--portrait {
+  background-color: #fff;
+  max-width: 200px;
+  padding: 7.5px;
+  margin: 40px;
+}
+.diary__page-img--rotate-left {
+  float: left;
+  transform: rotate(-20deg);
+}
+.diary__page-img--rotate-right {
+  float: right;
+  transform: rotate(20deg);
+}
+.diary__page__navigation {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+}
+.diary__page__navigation-button {
+  padding: 5px 15px;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.diary__page__page-number {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-text-light);
+  font-size: 14px;
+}
+
+.diary__tabs {
+  display: flex;
+  background-color: var(--color-dark);
+  border-bottom: 1px solid var(--color-text-light);
+}
+.diary__tabs-item {
+  padding: 10px 20px;
+  background-color: var(--color-dark-alt);
+  color: #fff;
+  cursor: pointer;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-right: 2px;
+}
+.diary__tabs-item--active {
+  background-color: var(--color-bg);
+  color: #000;
+}
+
+.page_navigation {
+  position: fixed;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.page_navigation-button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.page_navigation-button:hover {
+  background-color: #222;
+}
+
+.page_navigation-info {
+  align-self: center;
+  font-weight: bold;
+  font-family: monospace;
+}/*# sourceMappingURL=diary.css.map */

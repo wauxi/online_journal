@@ -1,0 +1,63 @@
+.diary__page {
+  padding: 40px 30px 100px;
+  position: relative;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:last-child {
+    border-right: none;
+  }
+
+  &-date {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0 20px;
+    color: var(--color-text-dark);
+  }
+
+  &-img {
+    width: 100%;
+
+    &--portrait {
+      background-color: #fff;
+      max-width: 200px;
+      padding: 7.5px;
+      margin: 40px;
+    }
+
+    &--rotate-left {
+      float: left;
+      transform: rotate(-20deg);
+    }
+
+    &--rotate-right {
+      float: right;
+      transform: rotate(20deg);
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+
+    &-button {
+      padding: 5px 15px;
+      background-color: var(--color-light);
+      border: 1px solid var(--color-border);
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  }
+
+  &__page-number {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-text-light);
+    font-size: 14px;
+  }
+}

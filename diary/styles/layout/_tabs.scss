@@ -1,0 +1,20 @@
+.diary__tabs {
+  display: flex;
+  background-color: var(--color-dark);
+  border-bottom: 1px solid var(--color-text-light);
+
+  &-item {
+    padding: 10px 20px;
+    background-color: var(--color-dark-alt);
+    color: #fff;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-right: 2px;
+
+    &--active {
+      background-color: var(--color-bg);
+      color: #000;
+    }
+  }
+}
