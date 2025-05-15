@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Diary</title>
   <link rel="stylesheet" href="./styles/diary.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/turn.js"></script>
+
 </head>
 <body>
   <div class="diary__tabs">
@@ -14,18 +17,17 @@
   </div>
 
   <main class="diary__content">
-    <div class="diary__page">
+    <div class="diary__page padding-20">
       <div class="diary__page-date">January 4th 2017</div>
       <p>Chloe woke me up earlyy- like 4am early! I mean all in good reason and it's not like a could be mad at her long- all she had to do was look at me with those bright blue eyes and I'd be a flustered Max puddle ready to wait on her hand and foot... not even worth trying to stay in bed.</p>
       <p>It was worth it though.</p>
       <p>We stumbled out into the freezing cold air and at that point I almost gave up, tugging at her sleeve and complaining as the frozen air and snowflakes attacked my face.</p>
-      <a href="/cake/index.html" target="_blank">
+      <a href="./cake/index.html" target="_blank">
         <img src="hp.png" class="diary__page-img diary__page-img--portrait diary__page-img--rotate-left" width="200" height="200" alt="hp" />
       </a>
       <p>But I'm glad the <span class="box">punk</span> managed to convince me to go further and also put up with my whining like a kid on a car trip the whole way...</p>
     </div>
-
-    <div class="diary__page">
+    <div class="diary__page padding-20">
       <p>We walked further and yeah by this point I was really starting to enjoy myself. Apart from the cold the sky was so clear and littered with stars and the snow capped trees looked like something out of a video game!</p>
       <p>Anyways after about fifteen minutes Chloe stopped me at the top of a hill. I was fully questioning it but as the sun came up I really started to understand why she had dragged my <span class="cross">disoriented</span> ass over here.</p>
       <p>We both took a seat on the ridge of the cliff, Chloe had brought a blanket so we didn't get wet but's haha. She cuddled up to me and we sat and watched the sunrise together, it was so <span class="bracket">cheesy</span> or as Chloe would say "mushy" but I'm such a sucker for that and I loved every minute.</p>
@@ -34,14 +36,100 @@
       </a>
       <p>Now I guess it's time for breakfast before I try snowboarding! Oooooor butt sledding with your clumsy legs strapped onto a slippery board you cant control... yeah hehhh this is a <span class="circle">bad idea</span>!</p>
     </div>
+
+    <div class="diary__page padding-20">
+      <div class="page-header">
+        <h2 class="page-header__title">Проводник на этой неделе</h2>
+      </div>
+      <div class="review-grid">
+        <div class="review-card">
+            <div class="review-card__header">
+                <span class="review-card__category">СИМС 3</span>
+            </div>
+            <div class="review-card__content">
+                <p>Бомба! «Симс 3» рвет шаблоны виртуальных миров! Полный отрыв – лепи героев с любой судьбой, возводи дворцы и рули их жизнью круглосуточно. Свежак от легендарной серии затянет по уши! Мы просто в восторге!</p>
+            </div>
+            <img class="review-card__image" src="https://upload.wikimedia.org/wikipedia/ru/7/7d/The_Sims_3_logo.JPG" alt="Симс 3">
+        </div>
+        <div class="review-card">
+            <div class="review-card__header">
+                <span class="review-card__category">ШКОЛА ОРАН</span>
+            </div>
+            <div class="review-card__content">
+                <p>Обалдеть! Аниме, по которому тащатся даже те, кто воротил нос от девчачьих мультиков! Сюжет про обычную Харухи в кругу шести парней из крутого хост-клуба – это просто улет! Смех, слезы и настоящая дружба в одном флаконе. Смотреть всем!</p>
+            </div>
+            <img class="review-card__image" src="https://lastfm.freetls.fastly.net/i/u/ar0/000b0e54502846a9c685db98260e36d7.jpg" alt="Школа Оран">
+        </div>
+        <div class="review-card">
+            <div class="review-card__header">
+                <span class="review-card__category">МАЙНКРАФТ</span>
+            </div>
+            <div class="review-card__content">
+                <p>Жесть! Пиксельная вселенная без правил захватила мир! В «Майнкрафте» ты рулишь парадом – строй, собирай и выживай в мире, который сам придумал. Графон? Забей! Пиксели снова в теме! Ночь – бойся зеленых гадов, день – твори и строй свою мега-империю! Это уже легенда!</p>
+            </div>
+            <img class="review-card__image" src="https://yandex-images.clstorage.net/5vnsC5150/8e1b4f4RtB/xy0SVkO1Ba3i7hQgqaPqAmimGsu0g2es9s0rJlYG6UZAnpu_E4l_qGatA08zg9qTXF8v3ubj0i2qvSFrYuMBEod7XgIA60Kt5_pfKuW55hJ96geIrpE_oMD2V1JxaZJ1Or2zyVjeIP5h50kLdLi11UsYWYitpoR0pd0JZUyheHrePgx_U79_guXlTx2epfoxUsYC6JTkRcfN-1R8SWWTYCGcjvdX2Afeb9QMCVC-qL5eKV-vo7GFTp3tM0F4jVlV5xkSQnSVbY3T5F8ukJvLIXHAEOOE31_B2s9eRmdei2sksqngS8kP-GPoBQNLhb6tXxZUlp2kpnumxQhkfphdTcc0H3JalkC2z8xMEqep-AtSzC7kktZi5PHkR2lGYbpgIqu1wGD1FM9g6TMLVayjoWo7TIOzkohviewgbEOgWXjYDSFCfZxRgczIexynqv0NRuUkxI7AT8DwwGVLdnu3SCafkeFw0T_PTNovME6VsKNJAmqkpbmreKPtDFxGuVBXxTYcXVuIcbf192ADnIfnHkf-Oe-I3EPYyPpHeVt0jl8Jm67kZewJ6XLpAB92qaCdTDtSj5SCh3KuyiRQa61Vb9gqNF5zj0y3395PFL6v5yxdxRDoksdj4fTNZGlXU7xfI5K-8kTrGu1hyjAwbaGHul8FVr-Go6p7rMIWWn-GfWnQDhZRVJZ5pO_lfBOtivokeMkczY39a8PM-lRQUnS0Zhy2nPN39BTJVukLKlKqmL5rAlGlu7m0dbnhDXJfo3hY3yMyf0e_aKvLxEkDuYb8AXXgAMCFylv86MNhW3Zml1AikJTxaO4J4HbMChFupKiWVj9RloWihH--zBZ8b4ZnWd0fE3BcqUSQ1ftRNK2hzDd0wDfviNpt_vn4XXd_fodxIIqyy076K95v9AobVIKGsE47eJWRlptNkcUDcmG3fWvrOCNvWqVdr-TXXSGthOsTW-o7xYPrSNXN_F1DaUY" alt="Майнкрафт">
+        </div>
+        <div class="review-card">
+            <div class="review-card__header">
+                <span class="review-card__category">ДОТА 2</span>
+            </div>
+            <div class="review-card__content">
+                <p>Крутяк! Онлайн-рубилово, от которого срывает башню! «Дота 2» - это замесы героев, где каждый раз – новый экшен с нереальной концовкой. Рулит команда, стратегия и скорость! Осторожно: можно забыть про школу и зависнуть намертво!</p>
+            </div>
+            <img class="review-card__image" src="https://i.pinimg.com/736x/c6/50/16/c65016474b34884e76979327f77aa601.jpg" alt="Дота 2">
+        </div>
+        <div class="review-card">
+            <div class="review-card__header">
+                <span class="review-card__category">ТЭЙЛОР СВИФТ</span>
+            </div>
+            <div class="review-card__content">
+                <p>Суперзвезда! Эта девчонка с гитарой – просто ураган! Тэйлор Свифт пробилась от кантри до попсы и покорила всех. Ее песни про любовь-морковь, друзей и кидалово – прямо про нас, пацанов и девчонок. Каждый диск – как личный дневник, который читаешь на одном дыхании!</p>
+            </div>
+            <img class="review-card__image" src="https://storage.ws.pho.to/s2/6e397583c508802cbb4803ec4f0360038c54cbbf_m.gif" alt="Тэйлор Свифт">
+        </div>
+        <div class="review-card">
+            <div class="review-card__header">
+                <span class="review-card__category">РАНЕТКИ</span>
+            </div>
+            <div class="review-card__content">
+                <p>Наши! Крутые девчонки с гитарами, которые поют про нас и нашу жизнь! «Ранетки» – это не просто группа, это подруги, которые на сцене отрываются по полной. Их песни качают, а сами они такие классные! Забудьте про всех этих Тейлор Свифт – наши девчонки уделывают заокеанских див по всем статьям! Слушай и пой с ними!</p>
+            </div>
+            <img class="review-card__image" src="https://main-cdn.sbermegamarket.ru/big1/hlr-system/122/423/552/471/117/37/600019505372b0.jpg" alt="Ранетки">
+        </div>
+        <div class="review-card">
+            <div class="review-card__header">
+                <span class="review-card__category">ПЯТНИЦА 13</span>
+            </div>
+            <div class="review-card__content">
+                <p>Мясо! Классика ужасов, от которой до сих пор мурашки по коже! Джейсон вернулся, и он не в духе! Озеро Хрустальное ждет новых жертв. Расчлененка, крики и маньяк в хоккейной маске – все как мы любим! Готовьтесь к бессонным ночам, фанаты жути!</p>
+            </div>
+            <img class="review-card__image" src="https://sun9-67.userapi.com/impf/fXPkppChDfpt4pnnUeomsIKrGwKfT5aJOWaP_Q/sJ0X7yfP1Ig.jpg?size=640x640&quality=96&sign=3b40ea09dc2897ebd5b02d079fd6a3d0&c_uniq_tag=H0VXEFoWdNQDcvjWOwsnRtgtIAcAlrEk0bcEQoW1KBk&type=album" alt="Ранетки">
+        </div>
+        <div class="review-card">
+            <div class="review-card__header">
+                <span class="review-card__category">ЦИВИЛИЗАЦИЯ 5</span>
+            </div>
+            <div class="review-card__content">
+                <p>Залипалово! Пошаговая стратегия, от которой можно просто потеряться во времени! «Цивилизация 5» – это твоя личная история человечества от пещер до звезд. Строй города, веди войны, развивай науку – делай все, чтобы твоя империя рулила миром! Реально затягивает на недели!</p>
+            </div>
+            <img class="review-card__image" src="https://digital-basket-01.wbbasket.ru/vol3/835/fc4e838b1ac598c556038b333714533c/1920.jpg" alt="Ранетки">
+        </div>
+      </div>
+    </div>
+    <div class="diary__page diary__page--ad">
+      <img src="https://www.revape.ru/images/misc/pepsi-pager-mtv-detsl.jpg" alt="ad">
+    </div>
   </main>
 
   <div class="page_navigation">
     <button id="prev" class="page_navigation-button">Back</button>
-    <span id="page-count" class="page_navigation-info">Page 1/2</span>
+    <span id="page-count" class="page_navigation-info">Page 1/1 </span>
     <button id="next" class="page_navigation-button">Next</button>
   </div>
 
-<script type="module" src="js/diary.js"></script>
+
+<script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
+<script src="js/highlighting.js"></script>
+<script src="js/pages.js"></script>
 </body>
 </html>

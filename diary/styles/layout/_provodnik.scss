@@ -1,0 +1,62 @@
+.page-header {
+    margin-bottom: 10px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.review-card {
+    border-bottom-left-radius: 15px; 
+    border-bottom-right-radius: 15px; 
+    overflow: hidden;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.review-card__header {
+    background-color: #20303a;
+    color: #e2de00;
+    padding: 5px;
+    justify-content: space-between;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.review-card__content {
+    padding: 8px;
+    font-size: 12px;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+    flex-grow: 1;
+    overflow: visible; 
+    font-weight: bold;
+}
+
+.review-card__image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    display: block;
+}
+
+.diary__page--ad {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+}
+
+.diary__page--ad img {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}

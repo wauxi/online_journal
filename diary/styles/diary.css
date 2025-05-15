@@ -140,7 +140,7 @@ svg * {
   }
 }
 :root {
-  --color-bg: #f2efe7;
+  --color-bg: #ffffff;
   --color-dark: #333333;
   --color-dark-alt: #555555;
   --color-light: #eeeeee;
@@ -168,10 +168,13 @@ body {
   font-size: 20px;
 }
 
+.padding-20 {
+  padding: 20px 30px;
+}
+
 .diary__page {
-  padding: 40px 30px 100px;
   position: relative;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.3882352941);
 }
 .diary__page:last-child {
   border-right: none;
@@ -186,7 +189,6 @@ body {
   width: 100%;
 }
 .diary__page-img--portrait {
-  background-color: #fff;
   max-width: 200px;
   padding: 7.5px;
   margin: 40px;
@@ -198,29 +200,6 @@ body {
 .diary__page-img--rotate-right {
   float: right;
   transform: rotate(20deg);
-}
-.diary__page__navigation {
-  display: flex;
-  gap: 10px;
-  position: absolute;
-  bottom: 15px;
-  right: 20px;
-}
-.diary__page__navigation-button {
-  padding: 5px 15px;
-  background-color: var(--color-light);
-  border: 1px solid var(--color-border);
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 14px;
-}
-.diary__page__page-number {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--color-text-light);
-  font-size: 14px;
 }
 
 .diary__tabs {
@@ -272,4 +251,68 @@ body {
   align-self: center;
   font-weight: bold;
   font-family: monospace;
+}
+
+.page-header {
+  margin-bottom: 10px;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.review-card {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  background-color: #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.review-card__header {
+  background-color: #20303a;
+  color: #e2de00;
+  padding: 5px;
+  justify-content: space-between;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.review-card__content {
+  padding: 8px;
+  font-size: 12px;
+  padding-bottom: 8px;
+  margin-bottom: 0;
+  flex-grow: 1;
+  overflow: visible;
+  font-weight: bold;
+}
+
+.review-card__image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex-shrink: 0;
+  margin-bottom: 0;
+  display: block;
+}
+
+.diary__page--ad {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+}
+
+.diary__page--ad img {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=diary.css.map */

@@ -1,0 +1,42 @@
+.padding-20 {
+  padding: 20px 30px;
+}
+
+
+
+.diary__page {
+  position: relative;
+  border-right: 1px solid #00000063;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  &-date {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0 20px;
+    color: var(--color-text-dark);
+  }
+
+  &-img {
+    width: 100%;
+    
+
+    &--portrait {
+      max-width: 200px;
+      padding: 7.5px;
+      margin: 40px;
+    }
+
+    &--rotate-left {
+      float: left;
+      transform: rotate(-20deg);
+    }
+
+    &--rotate-right {
+      float: right;
+      transform: rotate(20deg);
+    }
+  }
+}

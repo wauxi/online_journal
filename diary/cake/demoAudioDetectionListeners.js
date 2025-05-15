@@ -57,37 +57,16 @@ const createConfetti = () => {
 // Функция воспроизведения звука праздника
 const playPartySound = () => {
   try {
-    // Создаем простой звуковой эффект с помощью Web Audio API
-    const context = new (window.AudioContext || window.webkitAudioContext)();
-
-    // Играем серию веселых нот
-    const playNote = (frequency, time, duration) => {
-      const oscillator = context.createOscillator();
-      const gain = context.createGain();
-
-      oscillator.frequency.value = frequency;
-      oscillator.type = 'sine';
-
-      gain.gain.value = 0.1; // Тихий звук
-
-      oscillator.connect(gain);
-      gain.connect(context.destination);
-
-      oscillator.start(context.currentTime + time);
-      oscillator.stop(context.currentTime + time + duration);
-    };
-
-    // Играем мелодию
-    playNote(523.25, 0.0, 0.2);  // C5
-    playNote(587.33, 0.2, 0.2);  // D5
-    playNote(659.25, 0.4, 0.2);  // E5
-    playNote(698.46, 0.6, 0.2);  // F5
-    playNote(783.99, 0.8, 0.3);  // G5
-    playNote(880.00, 1.1, 0.6);  // A5
+    const audio = new Audio('22.mp3'); // укажите путь к вашему mp3-файлу
+    audio.volume = 0.5; // громкость от 0.0 до 1.0
+    audio.play().catch((error) => {
+      console.log("Не удалось воспроизвести звук:", error);
+    });
   } catch (e) {
     console.log("Аудио не поддерживается или отключено");
   }
 };
+
 
 // Улучшенная интерактивность свечей
 let candlesInitialized = false;
