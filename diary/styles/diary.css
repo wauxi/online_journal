@@ -139,6 +139,30 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
+@font-face {
+  font-family: "Akrobat";
+  src: url("/diary/fronts/Akrobat-ExtraBold.otf") format("otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Akrobat";
+  src: url("/diary/fronts/Akrobat-Bold.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Akrobat";
+  src: url("./fonts/Akrobat-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Akrobat";
+  src: url("./fonts/Akrobat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 :root {
   --color-bg: #ffffff;
   --color-dark: #333333;
@@ -147,7 +171,9 @@ svg * {
   --color-border: #cccccc;
   --color-text-dark: #222222;
   --color-text-light: #777777;
-  --font-family-base: "Indie Flower", cursive;
+  --color-dark-blue: #26315b;
+  --color-yellow: #ffd53d;
+  --font-family-base: "Akrobat", sans-serif;
 }
 
 body {
@@ -157,6 +183,38 @@ body {
   font-family: var(--font-family-base);
   background-color: var(--color-bg);
   overflow-y: auto;
+  background-image: url(/diary/img/Texturelabs_Paper_361M.jpg);
+}
+
+html {
+  cursor: url("/diary/cursor/Iron_Sword_Normal.cur"), auto;
+}
+
+a:hover {
+  cursor: url("/diary/cursor/Crosshair.cur"), auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Трек (фон) */
+::-webkit-scrollbar-track {
+  background: #1c303b;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-yellow);
+  border-radius: 10px;
+  border: 1px solid #1c303b;
+}
+
+/* При наведении */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9900;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .diary__content {
@@ -175,6 +233,7 @@ body {
 .diary__page {
   position: relative;
   border-right: 1px solid rgba(0, 0, 0, 0.3882352941);
+  border-top: 2px solid rgba(54, 54, 54, 0.6901960784);
 }
 .diary__page:last-child {
   border-right: none;
@@ -202,23 +261,45 @@ body {
   transform: rotate(20deg);
 }
 
+header {
+  background-image: url("https://texturelabs.org/wp-content/uploads/Texturelabs_LensFX_243S.jpg");
+}
+
 .diary__tabs {
   display: flex;
-  background-color: var(--color-dark);
-  border-bottom: 1px solid var(--color-text-light);
+  position: relative;
+  margin-left: 50px;
+  z-index: 2;
 }
+
 .diary__tabs-item {
-  padding: 10px 20px;
-  background-color: var(--color-dark-alt);
-  color: #fff;
-  cursor: pointer;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  margin-right: 2px;
+  width: 70px;
+  height: 70px;
+  background-image: url("/diary/img/");
+  background-size: cover;
+  margin-right: -12px;
+  margin-bottom: -10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #333;
+  cursor: url("/diary/cursor/Crosshair.cur"), auto;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease;
 }
+
+.diary__tabs-item .tab-icon {
+  width: 60px;
+  height: auto;
+  margin-left: 5px;
+}
+
 .diary__tabs-item--active {
-  background-color: var(--color-bg);
-  color: #000;
+  z-index: 3;
+  transform: translateY(20px); /* Спускается вниз */
 }
 
 .page_navigation {
@@ -255,6 +336,30 @@ body {
 
 .page-header {
   margin-bottom: 10px;
+  background-color: var(--color-dark-blue);
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  height: 50px;
+  margin-left: -30px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  font-family: var(--font-family-base);
+  font-weight: 900;
+}
+.page-header__inner {
+  display: flex;
+  align-items: center;
+}
+.page-header__title {
+  font-size: 14px;
+  color: var(--color-yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.page-header__icon {
+  font-size: 18px;
+  margin-left: 6px;
 }
 
 .review-grid {
@@ -268,38 +373,33 @@ body {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   overflow: hidden;
-  background-color: #e2e2e2;
+  background-color: #9fc0d3;
   display: flex;
   flex-direction: column;
-  margin-bottom: 0;
 }
-
 .review-card__header {
-  background-color: #20303a;
-  color: #e2de00;
+  background-color: var(--color-dark-blue);
+  color: var(--color-yellow);
   padding: 5px;
   justify-content: space-between;
   flex-shrink: 0;
   text-align: center;
+  font-family: var(--font-family-base);
+  font-weight: 900;
 }
-
 .review-card__content {
   padding: 8px;
   font-size: 12px;
-  padding-bottom: 8px;
-  margin-bottom: 0;
   flex-grow: 1;
   overflow: visible;
   font-weight: bold;
 }
-
 .review-card__image {
   width: 100%;
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
   flex-shrink: 0;
-  margin-bottom: 0;
   display: block;
 }
 
@@ -309,10 +409,8 @@ body {
   width: 100%;
   height: auto;
 }
-
 .diary__page--ad img {
   display: block;
   width: 100%;
-  margin: 0;
   padding: 0;
 }/*# sourceMappingURL=diary.css.map */

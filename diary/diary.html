@@ -10,11 +10,22 @@
 
 </head>
 <body>
-  <div class="diary__tabs">
-    <div class="diary__tabs-item diary__tabs-item--active">Journal</div>
-    <div class="diary__tabs-item">Photos</div>
-    <div class="diary__tabs-item">Messages</div>
-  </div>
+  <header> 
+    <div class="diary__tabs">
+      <div class="diary__tabs-item diary__tabs-item--active">
+        <div class="tab-icon"> <img src="/diary/img/book.png" alt=""></div>
+        
+      </div>
+      <div class="diary__tabs-item">
+        <div class="tab-icon"><img src="/diary/img/photos.png" alt=""></div>
+        
+      </div>
+      <div class="diary__tabs-item">
+        <div class="tab-icon"></div>
+        
+      </div>
+    </div>
+  </header>
 
   <main class="diary__content">
     <div class="diary__page padding-20">
@@ -38,9 +49,13 @@
     </div>
 
     <div class="diary__page padding-20">
-      <div class="page-header">
-        <h2 class="page-header__title">Проводник на этой неделе</h2>
+    <div class="page-header">
+      <div class="page-header__inner">
+        <h2 class="page-header__title">ПРОВОДНИК</h2>
+        <div class="page-header__icon">👉</div>
       </div>
+    </div>
+
       <div class="review-grid">
         <div class="review-card">
             <div class="review-card__header">
@@ -119,13 +134,21 @@
     <div class="diary__page diary__page--ad">
       <img src="https://www.revape.ru/images/misc/pepsi-pager-mtv-detsl.jpg" alt="ad">
     </div>
-  </main>
 
-  <div class="page_navigation">
-    <button id="prev" class="page_navigation-button">Back</button>
-    <span id="page-count" class="page_navigation-info">Page 1/1 </span>
-    <button id="next" class="page_navigation-button">Next</button>
-  </div>
+    <div class="diary__page diary__page--ad">
+      <img src="/diary/img/emo1.jpg" alt="ad">
+    </div>
+    <div class="diary__page diary__page--ad">
+      <img src="/diary/img/emo2.jpg" alt="ad">
+    </div>
+  </main>
+  <footer>
+    <div class="page_navigation">
+      <button id="prev" class="page_navigation-button">Back</button>
+      <span id="page-count" class="page_navigation-info">Page 1/1 </span>
+      <button id="next" class="page_navigation-button">Next</button>
+    </div>
+  </footer>
 
 
 <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>

@@ -1,3 +1,32 @@
+@font-face {
+  font-family: 'Akrobat';
+  src: url('/diary/fronts/Akrobat-ExtraBold.otf') format('otf');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Akrobat';
+  src: url('/diary/fronts/Akrobat-Bold.otf') format('otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Akrobat';
+  src: url('./fonts/Akrobat-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Akrobat';
+  src: url('./fonts/Akrobat-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 :root {
   --color-bg: #ffffff;
   --color-dark: #333333;
@@ -6,6 +35,8 @@
   --color-border: #cccccc;
   --color-text-dark: #222222;
   --color-text-light: #777777;
+  --color-dark-blue: #26315b;
+  --color-yellow: #ffd53d;
 
-  --font-family-base: 'Indie Flower', cursive;
+  --font-family-base: 'Akrobat', sans-serif;
 }
