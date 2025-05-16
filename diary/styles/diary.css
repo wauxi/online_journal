@@ -478,7 +478,6 @@ a:hover {
   height: 20%;
   background-color: #ff0000;
 }
-
 .belten__desc {
   -moz-column-count: 2;
        column-count: 2;
@@ -490,7 +489,6 @@ a:hover {
        column-fill: balance;
   background: linear-gradient(to bottom, #fcefd8, #ffff72, #ffb52c);
 }
-
 .belten__desc img {
   float: left;
   width: 250px;
@@ -503,7 +501,6 @@ a:hover {
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 35px;
 }
-
 .belten__desc p {
   margin: 10px;
   font-size: 12px;

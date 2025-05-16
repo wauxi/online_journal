@@ -4,35 +4,32 @@
         background-color: #ff0000;
     }
 
+    &__desc {
+        column-count: 2;
+        column-gap: 20px;
+        text-align: justify;
+        padding-top: 10px;
+        column-fill: balance;
+        background: linear-gradient(to bottom, #fcefd8, #ffff72, #ffb52c);
 
+        img {
+            float: left;
+            width: 250px;
+            height: 280px;
+            object-fit: cover;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            border: 10px solid #d9232d; 
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+        }
+
+        p {
+            margin: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+    }
 }
 
-.belten__desc {
-    column-count: 2;
-    column-gap: 20px;
-    text-align: justify;
-    padding-top: 10px;
-    column-fill: balance;
-    background: linear-gradient(to bottom, #fcefd8, #ffff72, #ffb52c);
-
-}
-
-.belten__desc img {
-    float: left;
-    width: 250px;
-    height: 280px;
-    object-fit: cover;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    border: 10px solid #d9232d; 
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 35px;
-
-}
-
-.belten__desc p {
-    margin: 10px;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.5;
-}
