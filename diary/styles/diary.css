@@ -172,7 +172,7 @@ svg * {
   --color-text-dark: #222222;
   --color-text-light: #777777;
   --color-dark-blue: #26315b;
-  --color-yellow: #ffd53d;
+  --color-yellow: #fde803;
   --font-family-base: "Akrobat", sans-serif;
 }
 
@@ -244,9 +244,6 @@ a:hover {
   margin: 10px 0 20px;
   color: var(--color-text-dark);
 }
-.diary__page-img {
-  width: 100%;
-}
 .diary__page-img--portrait {
   max-width: 200px;
   padding: 7.5px;
@@ -260,8 +257,44 @@ a:hover {
   float: right;
   transform: rotate(20deg);
 }
+.diary__page-ad {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+}
+.diary__page-ad img {
+  display: block;
+  width: 100%;
+  padding: 0;
+}
 
-header {
+.page_header {
+  margin-bottom: 10px;
+  background-color: var(--color-dark-blue);
+  display: flex;
+  justify-content: center;
+  width: 35%;
+  height: 50px;
+  margin-left: -30px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.page_header__inner {
+  display: flex;
+  align-items: center;
+}
+.page_header__title {
+  font-size: 22px;
+  color: var(--color-yellow);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.page_header__icon {
+  font-size: 22px;
+}
+
+.tabs {
   background-image: url("https://texturelabs.org/wp-content/uploads/Texturelabs_LensFX_243S.jpg");
 }
 
@@ -334,34 +367,6 @@ header {
   font-family: monospace;
 }
 
-.page-header {
-  margin-bottom: 10px;
-  background-color: var(--color-dark-blue);
-  display: flex;
-  justify-content: center;
-  width: 25%;
-  height: 50px;
-  margin-left: -30px;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
-  font-family: var(--font-family-base);
-  font-weight: 900;
-}
-.page-header__inner {
-  display: flex;
-  align-items: center;
-}
-.page-header__title {
-  font-size: 14px;
-  color: var(--color-yellow);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.page-header__icon {
-  font-size: 18px;
-  margin-left: 6px;
-}
-
 .review-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -370,8 +375,8 @@ header {
 }
 
 .review-card {
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
   overflow: hidden;
   background-color: #9fc0d3;
   display: flex;
@@ -384,7 +389,6 @@ header {
   justify-content: space-between;
   flex-shrink: 0;
   text-align: center;
-  font-family: var(--font-family-base);
   font-weight: 900;
 }
 .review-card__content {
@@ -392,7 +396,8 @@ header {
   font-size: 12px;
   flex-grow: 1;
   overflow: visible;
-  font-weight: bold;
+  line-height: 1.7;
+  font-weight: 600;
 }
 .review-card__image {
   width: 100%;
@@ -403,14 +408,105 @@ header {
   display: block;
 }
 
-.diary__page--ad {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  height: auto;
+.page__radio {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
 }
-.diary__page--ad img {
-  display: block;
-  width: 100%;
-  padding: 0;
+.page__radio-left {
+  width: 50%;
+  margin-right: 10px;
+}
+.page__radio-right {
+  width: 50%;
+}
+
+.page__radio-left {
+  display: flex;
+  flex-direction: column;
+}
+.page__radio-left .playlist {
+  flex: 1;
+}
+
+.chart {
+  background-color: var(--color-yellow);
+  color: black;
+  margin-top: 10px;
+}
+.chart__header {
+  font-weight: 800;
+  font-size: 24px;
+  padding: 12px;
+  margin-top: 0;
+}
+.chart__logo-placeholder {
+  height: 80px;
+  padding: 10px;
+  text-align: center;
+}
+.chart__table {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  border: 3px solid black;
+  border-radius: 8px;
+}
+.chart__row {
+  display: flex;
+  border-bottom: 1px solid black;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.chart__row--head {
+  background-color: black;
+  color: var(--color-yellow);
+  font-weight: 900;
+}
+.chart__row .chart__col {
+  padding: 10px;
+}
+.chart__row .chart__col:first-child {
+  flex: 0 0 80px;
+}
+.chart__row .chart__col:last-child {
+  flex: 1;
+}
+
+.belten__logo {
+  height: 20%;
+  background-color: #ff0000;
+}
+
+.belten__desc {
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  text-align: justify;
+  padding-top: 10px;
+  -moz-column-fill: balance;
+       column-fill: balance;
+  background: linear-gradient(to bottom, #fcefd8, #ffff72, #ffb52c);
+}
+
+.belten__desc img {
+  float: left;
+  width: 250px;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  border: 10px solid #d9232d;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+.belten__desc p {
+  margin: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
 }/*# sourceMappingURL=diary.css.map */

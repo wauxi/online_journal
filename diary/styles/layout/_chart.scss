@@ -1,0 +1,52 @@
+.chart {
+  background-color: var(--color-yellow);
+  color: black;
+  margin-top: 10px;
+
+  &__header {
+    font-weight: 800;
+    font-size: 24px;
+    padding: 12px;
+    margin-top: 0;
+  }
+
+  &__logo-placeholder {
+    height: 80px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  &__table {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    border: 3px solid black;
+    border-radius: 8px;
+  }
+
+  &__row {
+    display: flex;
+    border-bottom: 1px solid black;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+
+    &--head {
+      background-color: black;
+      color: var(--color-yellow);
+      font-weight: 900;
+    }
+
+    .chart__col {
+      padding: 10px;
+
+      &:first-child {
+        flex: 0 0 80px;
+      }
+
+      &:last-child {
+        flex: 1;
+      }
+    }
+  }
+}

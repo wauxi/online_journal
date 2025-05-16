@@ -2,8 +2,6 @@
   padding: 20px 30px;
 }
 
-
-
 .diary__page {
   position: relative;
   border-right: 1px solid #00000063;
@@ -21,9 +19,7 @@
   }
 
   &-img {
-    width: 100%;
     
-
     &--portrait {
       max-width: 200px;
       padding: 7.5px;
@@ -39,5 +35,46 @@
       float: right;
       transform: rotate(20deg);
     }
+  }
+
+  &-ad{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+
+    img {
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+.page_header {
+  margin-bottom: 10px;
+  background-color: var(--color-dark-blue);
+  display: flex;
+  justify-content: center;
+  width: 35%;
+  height: 50px;
+  margin-left: -30px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 22px;
+    color: var(--color-yellow);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  &__icon {
+    font-size: 22px;
   }
 }

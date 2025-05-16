@@ -1,0 +1,25 @@
+.page__radio {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+  &-left {
+    width: 50%;
+    margin-right: 10px;
+  }
+
+  &-right {
+    width: 50%;
+  }
+}
+
+.page__radio-left {
+  display: flex;
+  flex-direction: column;
+
+  .playlist {
+    flex: 1;
+  }
+}
+
+
