@@ -141,13 +141,13 @@ svg * {
 }
 @font-face {
   font-family: "Akrobat";
-  src: url("/diary/fronts/Akrobat-ExtraBold.otf") format("otf");
+  src: url("/diary/fronts/Akrobat-ExtraBold.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "Akrobat";
-  src: url("/diary/fronts/Akrobat-Bold.otf") format("otf");
+  src: url("/diary/fronts/Akrobat-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
@@ -168,6 +168,13 @@ svg * {
   --color-dark-blue: #26315b;
   --color-yellow: #fde803;
   --color-red: #ff0000;
+  --color-orange: #ffa33b;
+  --color-light-blue: #9fc0d3;
+  --color-text-dark: #333333;
+  --border-radius-sm: 0.5rem;
+  --border-radius-md: 1.25rem;
+  --border-radius-lg: 2rem;
+  --border-radius-xl: 5.625rem;
   --font-family-base: "Akrobat", sans-serif;
 }
 
@@ -176,7 +183,6 @@ body {
   display: flex;
   flex-direction: column;
   font-family: var(--font-family-base);
-  background-color: var(--color-bg);
   overflow-y: auto;
   background-image: url(/diary/img/Texturelabs_Paper_361M.jpg);
 }
@@ -218,11 +224,11 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   overflow-y: auto;
   line-height: 1.9;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .padding-20 {
-  padding: 20px 30px;
+  padding: 1.25rem 1.875rem;
 }
 
 .diary__page {
@@ -235,15 +241,15 @@ a:hover {
   border-right: none;
 }
 .diary__page-date {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
-  margin: 10px 0 20px;
+  margin: 0.625rem 0 1.25rem;
   color: var(--color-text-dark);
 }
 .diary__page-img--portrait {
   max-width: 200px;
-  padding: 7.5px;
-  margin: 40px;
+  padding: 0.47rem;
+  margin: 2.5rem;
 }
 .diary__page-img--rotate-left {
   float: left;
@@ -277,72 +283,72 @@ a:hover {
   width: 35%;
   height: 50px;
   margin-left: -30px;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
+  border-bottom-right-radius: var(--border-radius-md);
+  border-top-right-radius: var(--border-radius-md);
 }
 .page_header__inner {
   display: flex;
   align-items: center;
 }
 .page_header__title {
-  font-size: 22px;
+  font-size: 1.375rem;
   color: var(--color-yellow);
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
 .page_header__icon {
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 .tabs {
-  background-image: url("https://texturelabs.org/wp-content/uploads/Texturelabs_LensFX_243S.jpg");
+  background-image: url("");
 }
 
 .diary__tabs {
   display: flex;
   position: relative;
-  margin-left: 50px;
+  margin-left: 3.125rem;
   z-index: 2;
 }
 
 .diary__tabs-item {
-  width: 70px;
-  height: 70px;
+  width: 4.375rem;
+  height: 4.375rem;
   background-image: url("/diary/img/");
   background-size: cover;
-  margin-right: -12px;
-  margin-bottom: -10px;
+  margin-right: -0.75rem;
+  margin-bottom: -0.625rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  color: #333;
-  cursor: url("/diary/cursor/Crosshair.cur"), auto;
+  font-size: 0.75rem;
+  color: var(--color-text-dark);
+  cursor: url("../cursor/Crosshair.cur"), auto;
   position: relative;
   z-index: 1;
   transition: transform 0.2s ease;
 }
 
 .diary__tabs-item .tab-icon {
-  width: 60px;
+  width: 3.75rem;
   height: auto;
-  margin-left: 5px;
+  margin-left: 0.313rem;
 }
 
 .diary__tabs-item--active {
   z-index: 3;
-  transform: translateY(20px); /* Спускается вниз */
+  transform: translateY(1.25rem);
 }
 
 .page_navigation {
   position: fixed;
-  bottom: 15px;
+  bottom: 0.938rem;
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 10px;
-  padding: 10px 0;
+  gap: 0.625rem;
+  padding: 0.625rem 0;
   z-index: 1000;
 }
 
@@ -350,8 +356,8 @@ a:hover {
   background-color: #444;
   color: white;
   border: none;
-  padding: 6px 16px;
-  border-radius: 8px;
+  padding: 0.375rem 1rem;
+  border-radius: var(--border-radius-sm);
   cursor: pointer;
   font-family: inherit;
   transition: background-color 0.2s ease;
@@ -370,99 +376,98 @@ a:hover {
 .review-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 0.625rem;
+  margin-bottom: 0.625rem;
 }
 
 .review-card {
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 1.563rem;
+  border-bottom-right-radius: 1.563rem;
   overflow: hidden;
-  background-color: #9fc0d3;
   display: flex;
   flex-direction: column;
+  background-color: #ffdf2e;
 }
+
+.review-card:nth-child(even) {
+  background-color: var(--color-light-blue);
+}
+
 .review-card__header {
   background-color: var(--color-dark-blue);
   color: var(--color-yellow);
-  padding: 5px;
+  padding: 0.313rem;
   justify-content: space-between;
   flex-shrink: 0;
   text-align: center;
   font-weight: 900;
 }
+
 .review-card__content {
-  padding: 8px;
-  font-size: 12px;
+  padding: 0.5rem;
+  font-size: 0.75rem;
   flex-grow: 1;
   overflow: visible;
   line-height: 1.7;
   font-weight: 600;
 }
+
 .review-card__image {
   width: 100%;
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
-  flex-shrink: 0;
-  display: block;
+  border: 40px solid transparent;
+  -o-border-image: url("/diary/img/frame1.png") 40 round;
+     border-image: url("/diary/img/frame1.png") 40 round;
+  border-radius: 45px;
+}
+
+.review-card:nth-child(even) .review-card__image {
+  -o-border-image: url("/diary/img/frame2.png") 40 round;
+     border-image: url("/diary/img/frame2.png") 40 round;
 }
 
 .page__radio {
-  height: auto; /* пусть контент сам задаёт высоту */
-  min-height: 100%; /* если нужно, чтобы минимум совпадал с родителем */
+  height: auto;
+  min-height: 100%;
   display: flex;
   flex-direction: row;
 }
 .page__radio-left {
   width: 50%;
-  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  border-right: 5px solid var(--color-red);
 }
 .page__radio-right {
   width: 50%;
   background: linear-gradient(to bottom, #ffffff, #fcf399, #fcf397);
 }
-
-.page__radio-left {
-  display: flex;
-  flex-direction: column;
-}
-.page__radio-left .playlist {
+.page__radio .playlist {
   flex: 1;
 }
 
-.chart {
+.playlist {
   background-color: var(--color-yellow);
+}
+
+.chart {
   color: var(--color-black);
-  margin-top: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1019607843);
+  padding: 0.938rem;
 }
 .chart__header {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 800;
-  margin: 0 0 15px;
-  padding: 12px 0;
   text-align: center;
   text-transform: uppercase;
-}
-.chart__logo-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 80px;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 2px dashed var(--color-black);
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.0509803922);
-  text-align: center;
 }
 .chart-table {
   text-align: left;
 }
 .chart-table-wrapper {
   border: 3px solid var(--color-black);
+  cursor: pointer;
 }
 .chart-table-wrapper .chart-table {
   width: 100%;
@@ -471,8 +476,7 @@ a:hover {
 .chart-table-wrapper .chart-table__head {
   background-color: var(--color-black);
   color: var(--color-yellow);
-  font-weight: 900;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .chart-table-wrapper .chart-table__head .chart-table__col {
   padding: 12px 12px;
@@ -510,10 +514,10 @@ a:hover {
 .belten__desc {
   -moz-column-count: 2;
        column-count: 2;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
   text-align: justify;
-  padding-top: 10px;
+  padding-top: 0.625rem;
   -moz-column-fill: balance;
        column-fill: balance;
 }
@@ -538,18 +542,21 @@ a:hover {
 
 .album-block {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .album-block__header {
-  margin-inline: 30px;
-  padding: 12px 25px;
-  font-size: 20px;
+  margin-inline: 1.875rem;
+  padding: 0.75rem 1.563rem;
+  font-size: 1.25rem;
   font-weight: 900;
   color: var(--color-yellow);
   background-color: var(--color-red);
   border: 3px solid var(--color-yellow);
-  border-radius: 90px;
-  margin-bottom: 20px;
+  border-radius: var(--border-radius-xl);
+  margin-bottom: 1.25rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
@@ -557,7 +564,7 @@ a:hover {
   width: 100%;
   border-collapse: collapse;
   overflow: hidden;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
 }
 .album-block .album-table__cell, .album-block .album-table__head {
@@ -567,19 +574,19 @@ a:hover {
 .album-block .album-table__head {
   background-color: var(--color-red);
   color: var(--color-yellow);
-  font-size: 16px;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 .album-block .album-table__row:nth-child(odd) {
   background-color: transparent;
 }
 .album-block .album-table__row:nth-child(even) {
-  background-color: #ffa33b;
+  background-color: var(--color-orange);
   border-top: 3px solid var(--color-red);
   border-bottom: 3px solid var(--color-red);
 }
 .album-block .album-table__position {
-  width: 30px;
+  width: 1.875rem;
   font-weight: bold;
 }
 .album-block .album-table__artist {
@@ -657,3 +664,42 @@ canvas {
   text-shadow: 2px 2px 0 #000; /* Чёрная обводка */
 }
 
+@media (max-width: 768px) {
+  .diary__content {
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .page_header {
+    width: 50%;
+    margin-left: -1rem;
+  }
+}
+@media (max-width: 576px) {
+  .review-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .page__radio {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .page__radio-left,
+  .page__radio-right {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .belten__desc {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+  .belten__desc img {
+    margin-right: 10px;
+  }
+}/*# sourceMappingURL=diary.css.map */

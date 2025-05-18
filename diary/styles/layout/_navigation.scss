@@ -1,11 +1,11 @@
 .page_navigation {
   position: fixed;
-  bottom: 15px;
+  bottom: 0.938rem;
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 10px;
-  padding: 10px 0;
+  gap: 0.625rem;
+  padding: 0.625rem 0;
   z-index: 1000;
 }
 
@@ -13,8 +13,8 @@
   background-color: #444;
   color: white;
   border: none;
-  padding: 6px 16px;
-  border-radius: 8px;
+  padding: 0.375rem 1rem;
+  border-radius: var(--border-radius-sm);
   cursor: pointer;
   font-family: inherit;
   transition: background-color 0.2s ease;
