@@ -1,7 +1,8 @@
 .page__radio {
+  height: auto;        /* пусть контент сам задаёт высоту */
+  min-height: 100%;    /* если нужно, чтобы минимум совпадал с родителем */
   display: flex;
   flex-direction: row;
-  height: 100vh;
 
   &-left {
     width: 50%;
@@ -10,6 +11,8 @@
 
   &-right {
     width: 50%;
+    background: linear-gradient(to bottom, #ffffff, #fcf399, #fcf397);
+
   }
 }
 

@@ -1,0 +1,72 @@
+.album-block {
+  width: 100%;
+  margin-top: 20px;
+
+  &__header {
+    margin-inline: 30px;
+    padding: 12px 25px;
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--color-yellow);
+    background-color: var(--color-red);
+    border: 3px solid var(--color-yellow);
+    border-radius: 90px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  .album-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+
+    &__cell,
+    &__head {
+      padding: 10px 15px;
+      text-align: left;
+    }
+
+    &__head {
+      background-color: var(--color-red);
+      color: var(--color-yellow);
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    &__row:nth-child(odd) {
+      background-color: transparent;
+    }
+
+    &__row:nth-child(even) {
+      background-color: #ffa33b;
+      border-top: 3px solid var(--color-red);
+      border-bottom: 3px solid var(--color-red);
+    }
+
+    &__position {
+      width: 30px;
+      font-weight: bold;
+    }
+
+    &__artist {
+      font-weight: bold;
+      text-shadow: 1px 1px 0 #00000033;
+    }
+
+    &__track {
+      font-style: italic;
+    }
+  }
+}
+
+.album-block {
+  display: flex;
+  flex-direction: column;
+  flex: 1;            /* займёт всё доступное пространство по вертикали */
+  width: 100%;
+  margin-top: 20px;
+}
+

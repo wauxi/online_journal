@@ -1,7 +1,7 @@
 .belten {
     &__logo {
-        height: 20%;
-        background-color: #ff0000;
+        width: 100%;
+        overflow: hidden;
     }
 
     &__desc {
@@ -10,7 +10,6 @@
         text-align: justify;
         padding-top: 10px;
         column-fill: balance;
-        background: linear-gradient(to bottom, #fcefd8, #ffff72, #ffb52c);
 
         img {
             float: left;
@@ -19,7 +18,7 @@
             object-fit: cover;
             margin-top: -10px;
             margin-bottom: 10px;
-            border: 10px solid #d9232d; 
+            border: 10px solid #fe0000; 
             border-bottom-left-radius: 35px;
             border-bottom-right-radius: 35px;
         }

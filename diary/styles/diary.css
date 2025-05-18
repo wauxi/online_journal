@@ -164,15 +164,10 @@ svg * {
   font-style: normal;
 }
 :root {
-  --color-bg: #ffffff;
-  --color-dark: #333333;
-  --color-dark-alt: #555555;
-  --color-light: #eeeeee;
-  --color-border: #cccccc;
-  --color-text-dark: #222222;
-  --color-text-light: #777777;
+  --color-black: #000000;
   --color-dark-blue: #26315b;
   --color-yellow: #fde803;
+  --color-red: #ff0000;
   --font-family-base: "Akrobat", sans-serif;
 }
 
@@ -231,8 +226,9 @@ a:hover {
 }
 
 .diary__page {
-  position: relative;
-  border-right: 1px solid rgba(0, 0, 0, 0.3882352941);
+  display: flex;
+  flex-direction: column;
+  border-right: 4px solid rgba(0, 0, 0, 0.3568627451);
   border-top: 2px solid rgba(54, 54, 54, 0.6901960784);
 }
 .diary__page:last-child {
@@ -258,15 +254,19 @@ a:hover {
   transform: rotate(20deg);
 }
 .diary__page-ad {
-  display: block;
-  box-sizing: border-box;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   width: 100%;
-  height: auto;
 }
 .diary__page-ad img {
   display: block;
   width: 100%;
-  padding: 0;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .page_header {
@@ -409,9 +409,10 @@ a:hover {
 }
 
 .page__radio {
+  height: auto; /* пусть контент сам задаёт высоту */
+  min-height: 100%; /* если нужно, чтобы минимум совпадал с родителем */
   display: flex;
   flex-direction: row;
-  height: 100vh;
 }
 .page__radio-left {
   width: 50%;
@@ -419,6 +420,7 @@ a:hover {
 }
 .page__radio-right {
   width: 50%;
+  background: linear-gradient(to bottom, #ffffff, #fcf399, #fcf397);
 }
 
 .page__radio-left {
@@ -431,52 +433,79 @@ a:hover {
 
 .chart {
   background-color: var(--color-yellow);
-  color: black;
+  color: var(--color-black);
   margin-top: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1019607843);
 }
 .chart__header {
-  font-weight: 800;
   font-size: 24px;
-  padding: 12px;
-  margin-top: 0;
+  font-weight: 800;
+  margin: 0 0 15px;
+  padding: 12px 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 .chart__logo-placeholder {
-  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
   padding: 10px;
+  margin-bottom: 20px;
+  border: 2px dashed var(--color-black);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.0509803922);
   text-align: center;
 }
-.chart__table {
-  display: flex;
-  flex-direction: column;
-  margin: 5px;
-  border: 3px solid black;
-  border-radius: 8px;
+.chart-table {
+  text-align: left;
 }
-.chart__row {
-  display: flex;
-  border-bottom: 1px solid black;
+.chart-table-wrapper {
+  border: 3px solid var(--color-black);
+}
+.chart-table-wrapper .chart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.chart-table-wrapper .chart-table__head {
+  background-color: var(--color-black);
+  color: var(--color-yellow);
+  font-weight: 900;
+  font-size: 18px;
+}
+.chart-table-wrapper .chart-table__head .chart-table__col {
+  padding: 12px 12px;
+}
+.chart-table-wrapper .chart-table__body {
+  counter-reset: rowNumber;
+}
+.chart-table-wrapper .chart-table__body .chart-table__row {
+  counter-increment: rowNumber;
+  border-bottom: 1px solid var(--color-black);
+}
+.chart-table-wrapper .chart-table__body .chart-table__row:last-child {
+  border-bottom: none;
+}
+.chart-table-wrapper .chart-table__body .chart-table__row .chart-table__col {
+  padding: 10px 12px;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.5;
+  vertical-align: middle;
+  text-align: left;
 }
-.chart__row--head {
-  background-color: black;
-  color: var(--color-yellow);
-  font-weight: 900;
+.chart-table-wrapper .chart-table__body .chart-table__row .chart-table__col--place {
+  width: 80px;
+  text-align: center;
 }
-.chart__row .chart__col {
-  padding: 10px;
-}
-.chart__row .chart__col:first-child {
-  flex: 0 0 80px;
-}
-.chart__row .chart__col:last-child {
-  flex: 1;
+.chart-table-wrapper .chart-table__body .chart-table__row .chart-table__col--place::before {
+  content: counter(rowNumber) ".";
 }
 
 .belten__logo {
-  height: 20%;
-  background-color: #ff0000;
+  width: 100%;
+  overflow: hidden;
 }
 .belten__desc {
   -moz-column-count: 2;
@@ -487,7 +516,6 @@ a:hover {
   padding-top: 10px;
   -moz-column-fill: balance;
        column-fill: balance;
-  background: linear-gradient(to bottom, #fcefd8, #ffff72, #ffb52c);
 }
 .belten__desc img {
   float: left;
@@ -497,7 +525,7 @@ a:hover {
      object-fit: cover;
   margin-top: -10px;
   margin-bottom: 10px;
-  border: 10px solid #d9232d;
+  border: 10px solid #fe0000;
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 35px;
 }
@@ -506,4 +534,66 @@ a:hover {
   font-size: 12px;
   font-weight: 600;
   line-height: 1.5;
+}
+
+.album-block {
+  width: 100%;
+  margin-top: 20px;
+}
+.album-block__header {
+  margin-inline: 30px;
+  padding: 12px 25px;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--color-yellow);
+  background-color: var(--color-red);
+  border: 3px solid var(--color-yellow);
+  border-radius: 90px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.album-block .album-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 600;
+}
+.album-block .album-table__cell, .album-block .album-table__head {
+  padding: 10px 15px;
+  text-align: left;
+}
+.album-block .album-table__head {
+  background-color: var(--color-red);
+  color: var(--color-yellow);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.album-block .album-table__row:nth-child(odd) {
+  background-color: transparent;
+}
+.album-block .album-table__row:nth-child(even) {
+  background-color: #ffa33b;
+  border-top: 3px solid var(--color-red);
+  border-bottom: 3px solid var(--color-red);
+}
+.album-block .album-table__position {
+  width: 30px;
+  font-weight: bold;
+}
+.album-block .album-table__artist {
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+.album-block .album-table__track {
+  font-style: italic;
+}
+
+.album-block {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* займёт всё доступное пространство по вертикали */
+  width: 100%;
+  margin-top: 20px;
 }/*# sourceMappingURL=diary.css.map */
