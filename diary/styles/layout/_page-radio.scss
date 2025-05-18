@@ -1,12 +1,14 @@
 .page__radio {
-  height: auto;        /* пусть контент сам задаёт высоту */
-  min-height: 100%;    /* если нужно, чтобы минимум совпадал с родителем */
+  height: auto;
+  min-height: 100%;
   display: flex;
   flex-direction: row;
 
   &-left {
     width: 50%;
-    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    
   }
 
   &-right {
@@ -14,14 +16,9 @@
     background: linear-gradient(to bottom, #ffffff, #fcf399, #fcf397);
 
   }
-}
 
-.page__radio-left {
-  display: flex;
-  flex-direction: column;
-
-  .playlist {
-    flex: 1;
+    .playlist {
+      flex: 1;
   }
 }
 
