@@ -5,7 +5,6 @@
 
 .chart {
   color: var(--color-black);
-  margin-top: 0.625rem;
   padding: 0.938rem;
   
   &__header {
@@ -21,6 +20,8 @@
 
   &-table-wrapper {
     border: 3px solid var(--color-black);
+    cursor: pointer;
+
 
     .chart-table {
       width: 100%;

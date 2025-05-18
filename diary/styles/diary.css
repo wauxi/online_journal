@@ -438,6 +438,7 @@ a:hover {
   width: 50%;
   display: flex;
   flex-direction: column;
+  border-right: 5px solid var(--color-red);
 }
 .page__radio-right {
   width: 50%;
@@ -453,7 +454,6 @@ a:hover {
 
 .chart {
   color: var(--color-black);
-  margin-top: 0.625rem;
   padding: 0.938rem;
 }
 .chart__header {
@@ -467,6 +467,7 @@ a:hover {
 }
 .chart-table-wrapper {
   border: 3px solid var(--color-black);
+  cursor: pointer;
 }
 .chart-table-wrapper .chart-table {
   width: 100%;
