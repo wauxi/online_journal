@@ -597,12 +597,44 @@ a:hover {
   font-style: italic;
 }
 
-.album-block {
-  display: flex;
-  flex-direction: column;
-  flex: 1; /* займёт всё доступное пространство по вертикали */
-  width: 100%;
-  margin-top: 20px;
+@media (max-width: 768px) {
+  .diary__content {
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .page_header {
+    width: 50%;
+    margin-left: -1rem;
+  }
+}
+@media (max-width: 576px) {
+  .review-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .page__radio {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .page__radio-left,
+  .page__radio-right {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .belten__desc {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+  .belten__desc img {
+    margin-right: 10px;
+  }
 }/*# sourceMappingURL=diary.css.map */
 
 /* заливка скретч-карточек */
@@ -664,42 +696,3 @@ canvas {
   text-shadow: 2px 2px 0 #000; /* Чёрная обводка */
 }
 
-@media (max-width: 768px) {
-  .diary__content {
-    grid-template-columns: 1fr;
-    font-size: 1rem;
-  }
-}
-@media (max-width: 576px) {
-  .page_header {
-    width: 50%;
-    margin-left: -1rem;
-  }
-}
-@media (max-width: 576px) {
-  .review-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-}
-@media (max-width: 768px) {
-  .page__radio {
-    flex-direction: column;
-  }
-}
-@media (max-width: 768px) {
-  .page__radio-left,
-  .page__radio-right {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
-}
-@media (max-width: 576px) {
-  .belten__desc {
-    -moz-column-count: 1;
-         column-count: 1;
-  }
-  .belten__desc img {
-    margin-right: 10px;
-  }
-}/*# sourceMappingURL=diary.css.map */
