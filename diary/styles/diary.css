@@ -597,3 +597,62 @@ a:hover {
   width: 100%;
   margin-top: 20px;
 }/*# sourceMappingURL=diary.css.map */
+
+/* заливка скретч-карточек */
+canvas {
+    position: absolute;
+    cursor: grabbing;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+/* порядковый номер карточек */
+.rarity-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 36px;
+      height: 36px;
+      background: white;
+      color: red;
+      font-weight: bold;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+.bg-card {
+  background: linear-gradient(135deg, #3a5da8 0%, #8a2be2 100%)	;
+}
+
+.magazine-title {
+  font-family: 'Playfair Display', serif; /* Элегантный шрифт */
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ff6b6b; /* Розовый цвет */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Лёгкая тень */
+  letter-spacing: 1px; /* Расстояние между буквами */
+  text-transform: uppercase; /* Все буквы заглавные (опционально) */
+}
+
+.subtitle {
+  font-family: 'Barriecito', cursive;
+  font-size: 1.8rem;
+  color: #2a9d8f; /* Морская волна */
+  margin-top: -10px; /* Приподнимаем ближе к заголовку */
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.font-card {
+  font-family: 'Impact', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ffcc00; /* Жёлтый, как в Pokémon */
+  text-shadow: 2px 2px 0 #000; /* Чёрная обводка */
+}
