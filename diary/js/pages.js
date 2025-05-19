@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
         nextBtn.disabled = current === totalSpreads;
 
         localStorage.setItem('currentPage', current);
+        
+        // Важно! Применяем анимации после смены страниц
+        setTimeout(() => applyAnnotations(), 10);
     }
 
     prevBtn.addEventListener('click', () => {
@@ -38,7 +41,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     render();
-
-    // Всегда применяем анимацию при загрузке
-    applyAnnotations();
 });

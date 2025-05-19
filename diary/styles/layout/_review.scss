@@ -6,16 +6,24 @@
 }
 
 .review-card {
-  border-bottom-left-radius: 1.563rem;
-  border-bottom-right-radius: 1.563rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: #ffdf2e;
+  background-color: #ffdc41;
 }
 
 .review-card:nth-child(even) {
-  background-color: var(--color-light-blue);
+  background-color: #91c1d5;
+}
+
+.review-card:nth-child(8n+5),
+.review-card:nth-child(8n+7) {
+  background-color:#91c1d5;
+}
+
+.review-card:nth-child(8n+6),
+.review-card:nth-child(8n+8) {
+  background-color: #ffdc41;
 }
 
 .review-card__header {
@@ -48,4 +56,42 @@
 
 .review-card:nth-child(even) .review-card__image {
   border-image: url('/diary/img/frame2.png') 40 round;
+}
+
+.review-card:nth-child(8n+5) .review-card__image,
+.review-card:nth-child(8n+7) .review-card__image {
+  border-image: url('/diary/img/frame2.png') 40 round;
+}
+
+.review-card:nth-child(8n+6) .review-card__image,
+.review-card:nth-child(8n+8) .review-card__image {
+  border-image: url('/diary/img/frame1.png') 40 round;
+}
+
+
+.review-header {
+  margin-block: 10px;
+  background-color: var(--color-dark-blue);
+  display: flex;
+  justify-content: center;
+  height: 50px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    color: var(--color-yellow);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 900;
+
+  }
+}
+
+.review {
+  background: #91C1D5;
+  background: linear-gradient(47deg, rgba(145, 193, 213, 1) 0%, rgba(246, 218, 77, 1) 50%, rgba(145, 193, 213, 1) 88%);
+  flex: 1;
 }
