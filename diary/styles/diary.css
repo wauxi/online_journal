@@ -606,6 +606,155 @@ a:hover {
   font-family: var(--font-family-diary__marta);
 }
 
+.riddle__header {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  line-height: 1.4;
+}
+
+.riddle__page h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 800;
+}
+
+.riddle__header h1 {
+  text-transform: uppercase;
+  font-size: 44px;
+  margin: 0;
+}
+
+.riddle__header h2 {
+  font-size: 38px;
+}
+
+.riddle__header h3 {
+  font-size: 26px;
+  margin-bottom: 0.5em;
+}
+
+.highlight-yellow {
+  background-color: var(--color-yellow);
+  color: var(--color-red);
+  padding: 0 0.3em;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.highlight-red {
+  background-color: #ff0000;
+  color: var(--color-yellow);
+  padding: 0 0.3em;
+  font-weight: bold;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
+.riddle__page {
+  margin: 15px;
+}
+
+.riddle__main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.riddle__p-small {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.riddle__p-middle {
+  line-height: 1.7;
+  text-indent: 1rem;
+}
+
+.riddle__left-img {
+  border: 2px solid #9c9c9c;
+  margin-bottom: 10px;
+}
+.riddle__left h4 {
+  text-align: center;
+  font-size: 16px;
+}
+
+.riddle__box-words {
+  border: 2px solid #9c9c9c;
+  padding-inline: 10px;
+  margin-bottom: 10px;
+}
+
+.riddle__box-words ol {
+  color: var(--color-dark-blue);
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.riddle__right {
+  border: 3px dashed var(--color-dark-blue);
+  padding: 20px;
+  line-height: 1.4;
+}
+.riddle__right-img {
+  height: 350px;
+  width: 400px;
+  border: 2px solid #9c9c9c;
+  margin-bottom: 10px;
+}
+
+.riddle__right h4 {
+  background-color: var(--color-red);
+  box-shadow: 8px 8px #000000;
+  color: white;
+  padding: 6px 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.riddle__right h5 {
+  font-size: 16px;
+  margin: 6px 0;
+  text-align: center;
+}
+
+.riddle__right h3 {
+  color: red;
+  font-size: 22px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.riddle__right p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Убираем пунктир там, где не нужно */
+.riddle__right p.no-line {
+  margin-bottom: 4px;
+}
+
+/* Поля с линией */
+.line-field {
+  border-bottom: 1px dotted #000;
+  height: 12px;
+  margin: 5px 0 10px;
+}
+
+/* Красный заголовок */
+.riddle__right h4.red {
+  color: red;
+  background: none;
+  padding: 0;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
 @media (max-width: 768px) {
   .diary__content {
     grid-template-columns: 1fr;
