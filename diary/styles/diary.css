@@ -859,3 +859,12 @@ canvas {
   text-shadow: 2px 2px 0 #000; /* Чёрная обводка */
 }
 
+.h-font {
+  font-family: 'Arial', sans-serif;
+  font-weight: 800;
+}
+
+.h-font-min {
+  font-family: 'Franklin Gothic', sans-serif;
+  font-weight: 700;
+}
