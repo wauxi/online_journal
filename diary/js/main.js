@@ -45,9 +45,11 @@ const createScratchCard = (canvasId, imageSrc) => {
     init();
 };
 
-createScratchCard("scratch-card1", "cards-img/Scratch.png");
-createScratchCard("scratch-card2", "cards-img/Scratch.png");
-createScratchCard("scratch-card3", "cards-img/Scratch.png");
-createScratchCard("scratch-card4", "cards-img/Scratch.png");
-createScratchCard("scratch-card5", "cards-img/Scratch.png");
-createScratchCard("scratch-card6", "cards-img/Scratch.png");
+window.addEventListener("load", () => {
+    createScratchCard("scratch-card1", "cards-img/Scratch.png");
+    createScratchCard("scratch-card2", "cards-img/Scratch.png");
+    createScratchCard("scratch-card3", "cards-img/Scratch.png");
+    createScratchCard("scratch-card4", "cards-img/Scratch.png");
+    createScratchCard("scratch-card5", "cards-img/Scratch.png");
+    createScratchCard("scratch-card6", "cards-img/Scratch.png");
+});
