@@ -1,31 +1,8 @@
 @font-face {
-  font-family: 'Akrobat';
-  src: url('/diary/fronts/Akrobat-ExtraBold.otf') format('opentype');
-  font-weight: 900;
+  font-family: 'UraBumBumSP';
+  src: url('/diary/fronts/UraBumBumSP.otf') format('opentype');
   font-style: normal;
 }
-
-@font-face {
-  font-family: 'Akrobat';
-  src: url('/diary/fronts/Akrobat-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Akrobat';
-  src: url('./fonts/Akrobat-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Akrobat';
-  src: url('./fonts/Akrobat-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
 
 :root {
   --color-black: #000000;
@@ -42,4 +19,8 @@
   --border-radius-xl: 5.625rem; 
 
   --font-family-base: 'Akrobat', sans-serif;
+  --font-family-diary__marta: 'UraBumBumSP', sans-serif
+
+  
 }
+

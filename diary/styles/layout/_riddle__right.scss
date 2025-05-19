@@ -1,0 +1,61 @@
+.riddle__right {
+    border: 3px dashed var(--color-dark-blue);
+    padding: 20px;
+    line-height: 1.4;
+
+    &-img {
+        height: 350px;
+        width: 400px;
+        border: 2px solid #9c9c9c;
+        margin-bottom: 10px;
+    }
+}
+
+.riddle__right h4 {
+    background-color: var(--color-red);
+    box-shadow: 8px 8px #000000;
+    color: white;
+    padding: 6px 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.riddle__right h5 {
+    font-size: 16px;
+    margin: 6px 0;
+    text-align: center;
+}
+
+.riddle__right h3 {
+  color: red;
+  font-size: 22px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.riddle__right p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Убираем пунктир там, где не нужно */
+.riddle__right p.no-line {
+  margin-bottom: 4px;
+}
+
+/* Поля с линией */
+.line-field {
+  border-bottom: 1px dotted #000;
+  height: 12px;
+  margin: 5px 0 10px;
+}
+
+/* Красный заголовок */
+.riddle__right h4.red {
+  color: red;
+  background: none;
+  padding: 0;
+  margin-top: 15px;
+  font-size: 16px;
+}
