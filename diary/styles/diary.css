@@ -341,6 +341,11 @@ a:hover {
   transform: translateY(1.25rem);
 }
 
+.diary__tabs-item a:hover {
+  transform: scale(1.1);
+  
+}
+
 .page_navigation {
   position: fixed;
   bottom: 0.938rem;
