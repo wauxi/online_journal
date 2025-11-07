@@ -141,7 +141,7 @@ svg * {
 }
 @font-face {
   font-family: "UraBumBumSP";
-  src: url("/diary/fronts/UraBumBumSP.otf") format("opentype");
+  src: url("../fronts/UraBumBumSP.otf") format("opentype");
   font-style: normal;
 }
 :root {
@@ -166,15 +166,15 @@ body {
   flex-direction: column;
   font-family: var(--font-family-base);
   overflow-y: auto;
-  background-image: url(/diary/img/Texturelabs_Paper_361M.jpg);
+  background-image: url("../img/Texturelabs_Paper_361M.jpg");
 }
 
 html {
-  cursor: url("/diary/cursor/Iron_Sword_Normal.cur"), auto;
+  cursor: url("../cursor/Iron_Sword_Normal.cur"), auto;
 }
 
 a:hover {
-  cursor: url("/diary/cursor/Crosshair.cur"), auto;
+  cursor: url("../cursor/Crosshair.cur"), auto;
 }
 
 ::-webkit-scrollbar {
@@ -273,7 +273,7 @@ a:hover {
 .diary__tabs-item {
   width: 4.375rem;
   height: 4.375rem;
-  background-image: url("/diary/img/");
+  background-image: url("../img/");
   background-size: cover;
   margin-right: -0.75rem;
   margin-bottom: -0.625rem;
@@ -385,26 +385,26 @@ a:hover {
   -o-object-fit: cover;
      object-fit: cover;
   border: 40px solid transparent;
-  -o-border-image: url("/diary/img/frame1.png") 40 round;
-     border-image: url("/diary/img/frame1.png") 40 round;
+  -o-border-image: url("../img/frame1.png") 40 round;
+    border-image: url("../img/frame1.png") 40 round;
   border-radius: 45px;
 }
 
 .review-card:nth-child(even) .review-card__image {
-  -o-border-image: url("/diary/img/frame2.png") 40 round;
-     border-image: url("/diary/img/frame2.png") 40 round;
+  -o-border-image: url("../img/frame2.png") 40 round;
+     border-image: url("../img/frame2.png") 40 round;
 }
 
 .review-card:nth-child(8n+5) .review-card__image,
 .review-card:nth-child(8n+7) .review-card__image {
-  -o-border-image: url("/diary/img/frame2.png") 40 round;
-     border-image: url("/diary/img/frame2.png") 40 round;
+  -o-border-image: url("../img/frame2.png") 40 round;
+     border-image: url("../img/frame2.png") 40 round;
 }
 
 .review-card:nth-child(8n+6) .review-card__image,
 .review-card:nth-child(8n+8) .review-card__image {
-  -o-border-image: url("/diary/img/frame1.png") 40 round;
-     border-image: url("/diary/img/frame1.png") 40 round;
+  -o-border-image: url("../img/frame1.png") 40 round;
+     border-image: url("../img/frame1.png") 40 round;
 }
 
 .review-header {

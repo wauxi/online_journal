@@ -4,15 +4,15 @@ body {
   flex-direction: column;
   font-family: var(--font-family-base);
   overflow-y: auto;
-  background-image: url(/diary/img/Texturelabs_Paper_361M.jpg);
+  background-image: url('../img/Texturelabs_Paper_361M.jpg');
 }
 
 html {
-  cursor: url('/diary/cursor/Iron_Sword_Normal.cur'), auto;
+  cursor: url('../cursor/Iron_Sword_Normal.cur'), auto;
 }
 
 a:hover {
-  cursor: url('/diary/cursor/Crosshair.cur'), auto;
+  cursor: url('../cursor/Crosshair.cur'), auto;
 }
 
 ::-webkit-scrollbar {

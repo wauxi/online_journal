@@ -50,22 +50,22 @@
   aspect-ratio: 1/1;
   object-fit: cover;
   border: 40px solid transparent;
-  border-image: url('/diary/img/frame1.png') 40 round;
+  border-image: url('../img/frame1.png') 40 round;
   border-radius: 45px;
 }
 
 .review-card:nth-child(even) .review-card__image {
-  border-image: url('/diary/img/frame2.png') 40 round;
+  border-image: url('../img/frame2.png') 40 round;
 }
 
 .review-card:nth-child(8n+5) .review-card__image,
 .review-card:nth-child(8n+7) .review-card__image {
-  border-image: url('/diary/img/frame2.png') 40 round;
+  border-image: url('../img/frame2.png') 40 round;
 }
 
 .review-card:nth-child(8n+6) .review-card__image,
 .review-card:nth-child(8n+8) .review-card__image {
-  border-image: url('/diary/img/frame1.png') 40 round;
+  border-image: url('../img/frame1.png') 40 round;
 }
 
 
