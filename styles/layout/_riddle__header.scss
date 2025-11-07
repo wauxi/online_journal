@@ -1,0 +1,45 @@
+.riddle__header {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    line-height: 1.4;
+}
+
+.riddle__page h1,h2,h3,h4 {
+    margin: 0;
+    font-weight: 800;
+}
+
+.riddle__header h1 {
+    text-transform: uppercase;
+    font-size: 44px;
+    margin: 0;
+}
+
+.riddle__header h2 {
+    font-size: 38px; 
+}
+
+.riddle__header h3 {
+    font-size: 26px; 
+    margin-bottom: 0.5em;
+}
+
+.highlight-yellow {
+    background-color: var(--color-yellow); 
+    color: var(--color-red);
+    padding: 0 0.3em; 
+    font-weight: bold;
+    white-space: nowrap;
+
+}
+
+.highlight-red {
+    background-color: #ff0000; 
+    color: var(--color-yellow); 
+    padding: 0 0.3em; 
+    font-weight: bold;
+    white-space: nowrap; 
+    border-radius: 5px;
+}
+
