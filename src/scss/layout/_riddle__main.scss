@@ -1,0 +1,21 @@
+.riddle__page {
+    margin: 15px;
+}
+
+.riddle__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.riddle__p-small {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.riddle__p-middle {
+    line-height: 1.7;
+    text-indent: 1rem;
+}

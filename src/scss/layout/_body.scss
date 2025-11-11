@@ -1,0 +1,42 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  overflow-y: auto;
+  background-image: url('../assets/img/Texturelabs_Paper_361M.jpg');
+}
+
+html {
+  cursor: url('../assets/cursor/Iron_Sword_Normal.cur'), auto;
+}
+
+a:hover {
+  cursor: url('../assets/cursor/Crosshair.cur'), auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+/* Трек (фон) */
+::-webkit-scrollbar-track {
+  background: #1c303b;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-yellow);
+  border-radius: 10px;
+  border: 1px solid #1c303b;
+}
+
+/* При наведении */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9900;
+  transition: 0.5s;
+}
+
+.pg20 {
+  padding: 20px 30px;
+}

@@ -1,0 +1,9 @@
+node_modules/
+.env
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+# If you prefer to generate public/ in CI, uncomment the next line
+# public/
