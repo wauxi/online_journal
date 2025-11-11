@@ -10,7 +10,7 @@
     "copy:cake": "powershell -Command \"Copy-Item -Path cake/* -Destination public/assets/cake -Recurse -Force\"",
     "build": "npm run build:css && npm run build:html && npm run copy:assets && npm run copy:js && npm run copy:cake",
     "watch:css": "sass --watch src/scss:public/css",
-    "start": "npx live-server public --open=./diary.html"
+    "start": "npx live-server --open=diary.html"
   },
   "devDependencies": {
     "sass": "^1.73.0",

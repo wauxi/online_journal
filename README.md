@@ -50,27 +50,34 @@ Open in your browser: http://localhost:8080 (or the address printed by live-serv
 📁 Project Structure
 
 online_journal/
-├── diary.html             # Source HTML (editable, copied into public/ during build)
+├── diary.html             # Source HTML (uses ./public/ paths for development)
 ├── package.json          # Build scripts (sass, copy, start)
 ├── scripts/
-│   └── build-html.js     # Rewrites paths and writes public/diary.html
+│   └── build-html.js     # Converts paths for production build
 ├── src/
 │   ├── js/               # JS source files (pages.js, highlighting.js, turn.js, etc.)
 │   ├── scss/             # SCSS sources and partials
 │   └── assets/           # Images, cursors, fonts used by the SCSS and HTML
 ├── public/               # Built site (CSS, JS, assets, diary.html) — ready to deploy
+│   ├── diary.html        # Production HTML (uses ./ paths)
+│   ├── css/              # Compiled CSS
+│   ├── js/               # Copied JS files
+│   └── assets/           # Copied assets (img, cursor, fronts, svg, cake)
 ├── cake/                 # Small separate demo app included in the site
 └── README.md
 
 ⚙️ Configuration
 
-- The editable `diary.html` lives in the repository root. The build step `npm run build:html` (run automatically as part of `npm run build`) copies it to `public/diary.html` and adjusts asset paths so the page works from `public/`.
+- The editable `diary.html` lives in the repository root and uses paths like `./public/css/`, `./public/js/`, `./public/assets/` for development
+- The build step `npm run build:html` copies it to `public/diary.html` and converts paths to `./css/`, `./js/`, `./assets/` for production
+- You can open `diary.html` in the root during development (it will load resources from `public/`)
+- Deploy the `public/` folder to your web server
 - Build scripts are declared in `package.json`:
   - `build:css` — compile SCSS → `public/css`
-  - `build:html` — rewrite and copy `diary.html` → `public/diary.html`
+  - `build:html` — convert paths and copy `diary.html` → `public/diary.html`
   - `copy:assets`, `copy:js`, `copy:cake` — copy source assets/JS/cake into `public/`
   - `build` — runs all steps in order
-  - `start` — runs a tiny static server (`live-server`) serving `public/`
+  - `start` — runs a tiny static server (`live-server`) opening root `diary.html`
 
 🛠️ Technologies Used
 - Vanilla JavaScript (ES6)
@@ -85,6 +92,10 @@ Notes & Next Steps
 
 Source HTML
 
-- The editable source `diary.html` lives in the repository root. The build process copies and rewrites it into `public/diary.html` (fixing asset paths). The step is `npm run build:html` (run as part of `npm run build`).
+- The editable source `diary.html` lives in the repository root and uses `./public/` paths for development
+- The build process converts it to `public/diary.html` with standard relative paths (fixing asset paths)
+- The build step is `npm run build:html` (run as part of `npm run build`)
+- During development, you can open root `diary.html` directly — it will load all resources from `public/`
+- For deployment, use the `public/` folder
 
 If you want, I can also add a simple GitHub Actions workflow to build and deploy `public/` automatically.
