@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "build:css": "sass src/scss:public/css --no-source-map --style=compressed",
+    "build:html": "node scripts/build-html.js",
     "copy:assets": "powershell -Command \"Copy-Item -Path src/assets/* -Destination public/assets -Recurse -Force\"",
     "copy:js": "powershell -Command \"Copy-Item -Path src/js/* -Destination public/js -Recurse -Force\"",
-    "build": "npm run build:css && npm run copy:assets && npm run copy:js",
+    "copy:cake": "powershell -Command \"Copy-Item -Path cake/* -Destination public/assets/cake -Recurse -Force\"",
+    "build": "npm run build:css && npm run build:html && npm run copy:assets && npm run copy:js && npm run copy:cake",
     "watch:css": "sass --watch src/scss:public/css",
     "start": "npx live-server public --open=./diary.html"
   },
