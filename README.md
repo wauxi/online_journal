@@ -1,4 +1,4 @@
-# ☕ Online Journal / Diary
+# 📓 Online Journal 
 
 A small, modern static diary site built with Vanilla JavaScript, SCSS and plain HTML.
 
@@ -11,7 +11,6 @@ A small, modern static diary site built with Vanilla JavaScript, SCSS and plain 
 * **Simple page navigation**: Powered by small vanilla JS scripts
 * **Built-in annotations**: Interactive highlighting and notes
 * **Separate cake/ mini-app**: Included and copied into the public build
-* **Zero heavy runtime dependencies**: Easy to inspect and extend
 
 ## Quick Start
 
